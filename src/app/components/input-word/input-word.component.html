@@ -1,0 +1,13 @@
+<div class="col-lg-3">
+  <div class="input-group">
+    <input id="search-box" [value]="_synonym" type="text" class="form-control" placeholder="Search synonyms...">
+    <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Search</button>
+      </span>
+  </div>
+
+  <div *ngIf="synonyms && synonyms.length > 0" class="list-group">
+    <app-synonyms *ngFor="let item of synonyms" [synonym] = item (inputEvent)="changeInput($event)"></app-synonyms>
+  </div>
+
+</div>
