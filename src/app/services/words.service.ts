@@ -14,12 +14,7 @@ export class WordsService {
   getSynonyms(word: string, type: string) {
     return this._http
       .get(`/api/v1/wordapi/${word}/${type}`)
-      .map(res => {
-        this.results = res.json();
-        console.log(this.results);
-        return this.results;
-      })
-      // .subscribe(res => console.log(res))
+      .map(res => res.json())
       .catch((err: any) => {
         return Observable.throw(err.message);
       });
