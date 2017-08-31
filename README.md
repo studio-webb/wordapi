@@ -29,5 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Build and run project with backend:
 
-npm install
-npm start
+`npm install`  
+`npm start`  
