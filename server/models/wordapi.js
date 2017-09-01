@@ -3,7 +3,6 @@ const db = mongojs('mongodb://dbadmin:admin123@ds163613.mlab.com:63613/wordapi',
 
 
 exports.get = function (id, cb) {
-    console.log('id', id);
     db.list.findOne({ _id: id}, function (err, result) {
         cb(err, result);
     });
